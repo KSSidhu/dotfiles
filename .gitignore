@@ -18,6 +18,7 @@ TAGS
 fishd.*
 configstore/*
 iterm2/AppSupport
+/nvim.bak
 
 # Vim
 Session.vim
