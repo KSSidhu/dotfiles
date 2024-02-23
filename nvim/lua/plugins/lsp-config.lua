@@ -18,6 +18,7 @@ return {
 					"eslint",
 					"cssls",
 					"clangd",
+					"gopls",
 				},
 			})
 		end,
@@ -32,6 +33,7 @@ return {
 			lspconfig.eslint.setup({})
 			lspconfig.cssls.setup({})
 			lspconfig.clangd.setup({})
+			lspconfig.gopls.setup({})
 			lspconfig.rust_analyzer.setup({
 				-- Server-specific settings. See `:help lspconfig-setup`
 				settings = {
