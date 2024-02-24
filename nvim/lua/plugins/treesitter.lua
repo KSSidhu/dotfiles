@@ -19,6 +19,10 @@ return {
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
+      -- autotag html auto close plugin
+			autotag = {
+				enable = true,
+			},
 		})
 	end,
 }
