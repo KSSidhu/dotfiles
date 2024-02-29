@@ -19,6 +19,6 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 
 ## Shell Setup:
 * NeoVim
-* Nerd fonts - Powerline-patched fonts. I use Monokai.
-* Warp
+* Nerd fonts - Powerline-patched fonts. I use Mononoki Nerd Font.
+* iTerm
 
