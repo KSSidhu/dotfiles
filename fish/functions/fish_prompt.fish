@@ -1,10 +1,6 @@
 function fish_prompt --description 'Write out the prompt'
     set -l last_status $status
 
-    prompt_login
-
-    echo -n ':'
-
     # PWD
     set_color $fish_color_cwd
     echo -n (prompt_pwd)

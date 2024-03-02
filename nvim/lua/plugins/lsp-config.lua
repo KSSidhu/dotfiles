@@ -36,7 +36,6 @@ return {
         capabilities = capabilities,
       })
       lspconfig.dockerls.setup({})
-      lspconfig.eslint.setup({})
       lspconfig.cssls.setup({
         capabilities = capabilities,
       })

@@ -2,6 +2,8 @@
 Been learning vim and this is an updated setup I enjoy using.
 I primarily work in typescript, react, golang. Been playing around with rust too. 
 
+![nvim screenshot](../images/editor-start-menu.png)
+
 ## Plugins:
 * [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A plugin manager for Neovim
 * [catppuccin/nvim](https://github.com/catppuccin/nvim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
