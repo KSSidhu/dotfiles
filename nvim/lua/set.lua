@@ -23,6 +23,13 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 
+-- Highlight line cursor is on
+vim.opt.cursorline = true
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
+
 vim.opt.updatetime = 50
 vim.opt.backspace = { "start", "eol", "indent" }
 
