@@ -4,7 +4,6 @@ return {
   dependencies = "nvim-tree/nvim-web-devicons",
   config = function()
     local configs = require("bufferline")
-    local frappe = require("catppuccin.palettes").get_palette("frappe")
 
     configs.setup({
       options = {
@@ -16,17 +15,6 @@ return {
         color_icons = true,
         diagnostics = "nvim_lsp",
       },
-      highlights = require("catppuccin.groups.integrations.bufferline").get({
-        styles = { "italic", "bold" },
-        custom = {
-          all = {
-            fill = { bg = frappe.bg },
-          },
-          frappe = {
-            background = { bg = frappe.bg },
-          },
-        },
-      }),
     })
   end,
 }

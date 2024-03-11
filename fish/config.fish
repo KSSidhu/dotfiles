@@ -10,6 +10,8 @@ alias ls "ls -p -G"
 alias la "ls -A"
 
 set -gx EDITOR nvim
+# Rust PATH
+set -gx PATH "$HOME/.cargo/bin" $PATH;
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
