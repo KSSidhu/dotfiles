@@ -28,11 +28,6 @@ vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right win
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
--- New Tab :D
-vim.keymap.set("n", "te", ":tabedit")
-vim.keymap.set("n", "<tab>", ":tabnext<Return>")
-vim.keymap.set("n", "<s-tab>", ":tabprev<Return>")
-
 -- Highlight line cursor is on
 vim.opt.cursorline = true
 
@@ -42,6 +37,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- Diagnostic keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+
+-- Split Windows
+vim.keymap.set("n", "<leader>ss", ":split<Return>", {})
+vim.keymap.set("n", "<leader>vs", ":vsplit<Return>", {})
 
 vim.opt.updatetime = 50
 vim.opt.backspace = { "start", "eol", "indent" }
