@@ -10,7 +10,7 @@ return {
 			},
       level = 2,
 			minimum_width = 50,
-			render = "compact",
+			render = "default",
 			stages = "fade_in_slide_out",
 			timeout = 3000,
 		})
