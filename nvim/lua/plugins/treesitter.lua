@@ -16,6 +16,7 @@ return {
         "css",
         "json",
         "html",
+        "dockerfile"
       },
       highlight = { enable = true },
       indent = { enable = true },
