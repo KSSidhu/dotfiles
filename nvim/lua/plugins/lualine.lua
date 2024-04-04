@@ -44,12 +44,40 @@ return {
       return mode_map[vim.api.nvim_get_mode().mode] or "__"
     end
 
+    local icons = {
+      git = {
+        added = " ",
+        modified = " ",
+        removed = " ",
+      },
+    }
+
     require("lualine").setup({
       options = {
         theme = "onedark",
       },
       sections = {
         lualine_a = { modes },
+        lualine_b = {
+          {
+            "diff",
+            symbols = {
+              added = icons.git.added,
+              modified = icons.git.modified,
+              removed = icons.git.removed,
+            },
+            source = function()
+              local gitsigns = vim.b.gitsigns_status_dict
+              if gitsigns then
+                return {
+                  added = gitsigns.added,
+                  modified = gitsigns.changed,
+                  removed = gitsigns.removed,
+                }
+              end
+            end,
+          },
+        },
       },
     })
   end,
