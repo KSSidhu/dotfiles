@@ -10,7 +10,7 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 ## Plugins:
 
 - [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A plugin manager for Neovim
-- [rose-pine/nvim](https://github.com/rose-pine/neovim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
+- [eldritch/nvim](https://github.com/eldritch-theme/eldritch.nvim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure Neovim statusline written in Lua
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Treesitter configurations and abstraction layer for Neovim
 - [kyazdani42/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Lua fork of vim-web-devicons for neovim
@@ -26,6 +26,7 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion engine plugin for neovim written in Lua.
 - [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - A nvim-cmp source for command line completion
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - A lua powered greeter
+- [ptdewey/yankbank-nvim](https://github.com/ptdewey/yankbank-nvim) - Plugin to keep track of recent yanks/deletions easier
 
 ## Shell Setup:
 
