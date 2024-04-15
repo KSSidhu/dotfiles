@@ -23,13 +23,4 @@ return {
       require("telescope").load_extension("ui-select")
     end,
   },
-  {
-    "ptdewey/yankbank-nvim",
-    config = function()
-      require("yankbank").setup({
-        max_entries = 5,
-      })
-      vim.keymap.set("n", "<leader>y", "<cmd>YankBank<CR>", { noremap = true })
-    end,
-  },
 }
