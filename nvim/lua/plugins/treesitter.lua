@@ -11,6 +11,7 @@ return {
         "typescript",
         "tsx",
         "lua",
+        "dockerfile",
         "rust",
         "go",
         "css",
