@@ -18,15 +18,14 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 - [rcarriga/nvim-notify](https://github.com/rcarriga/nvim-notify) - Configurable notification manager for neovim
 - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Autopairs
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag) - Use treesitter to auto close and auto rename html tag
-- [akinsho/nvim-bufferline.lua](https://github.com/akinsho/bufferline.nvim) - A snazzy bufferline
 - [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git integration for buffers
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - A Git wrapper for nvim
-- [tpope/vim-commentary](https://github.com/tpope/vim-commentary) - Commenting plugin
 - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snip engine
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion engine plugin for neovim written in Lua.
 - [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - A nvim-cmp source for command line completion
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - A lua powered greeter
-- [ptdewey/yankbank-nvim](https://github.com/ptdewey/yankbank-nvim) - Plugin to keep track of recent yanks/deletions easier
+- [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer allowing editing files like buffers
+- [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Nice approach to marking files with nice UI
 
 ## Shell Setup:
 
