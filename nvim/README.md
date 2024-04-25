@@ -11,6 +11,7 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 
 - [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A plugin manager for Neovim
 - [eldritch/nvim](https://github.com/eldritch-theme/eldritch.nvim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
+- [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight, powerful formatter
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure Neovim statusline written in Lua
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Treesitter configurations and abstraction layer for Neovim
 - [kyazdani42/nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - Lua fork of vim-web-devicons for neovim
