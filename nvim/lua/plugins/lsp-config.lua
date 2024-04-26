@@ -50,7 +50,9 @@ return {
           },
         },
       })
-      lspconfig.dockerls.setup({})
+      lspconfig.dockerls.setup({
+        capabilities = capabilities,
+      })
       lspconfig.cssls.setup({
         capabilities = capabilities,
       })
