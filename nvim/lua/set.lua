@@ -1,20 +1,25 @@
 vim.g.mapleader = " "
+
+-- line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
 vim.opt.title = true
 vim.opt.showmode = false
 
+-- tabs & indentation
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-
-vim.opt.colorcolumn = "80"
-vim.opt.wrap = false -- don't wrap lines
-
 vim.opt.smartindent = true
 
+-- line wrapping
+vim.opt.colorcolumn = "80"
+vim.opt.wrap = false -- don't wrap lines
+vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+
+-- search settings
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
@@ -31,6 +36,10 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Highlight line cursor is on
 vim.opt.cursorline = true
 
+-- backspace & refresh
+vim.opt.updatetime = 50
+vim.opt.backspace = { "start", "eol", "indent" }
+
 -- Open file explorer
 vim.keymap.set("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
@@ -42,8 +51,9 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<leader>ss", ":split<Return>", {})
 vim.keymap.set("n", "<leader>vs", ":vsplit<Return>", {})
 
-vim.opt.updatetime = 50
-vim.opt.backspace = { "start", "eol", "indent" }
+-------------------------------------------------------------------------------
+-------------------------------- autocmds -------------------------------------
+-------------------------------------------------------------------------------
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
