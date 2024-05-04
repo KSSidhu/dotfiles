@@ -47,4 +47,10 @@ return {
 			end, { desc = "open harpoon list" })
 		end,
 	},
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup({})
+		end,
+	},
 }
