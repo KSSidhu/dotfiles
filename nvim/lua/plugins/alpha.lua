@@ -17,7 +17,7 @@ return {
 			[[                        ]],
 		}
 
-		dashboard.opts.opts.margin = 55
+		dashboard.section.header.opts.position = "center"
 		alpha.setup(dashboard.opts)
 	end,
 }

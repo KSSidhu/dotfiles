@@ -10,7 +10,7 @@ decorations = "Buttonless"
 [font]
 normal.family = "Mononoki Nerd Font"
 
-size = 16
+size = 18
 
 # Default colors
 [colors.primary]
