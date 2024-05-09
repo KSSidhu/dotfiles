@@ -3,6 +3,9 @@ return {
 		"stevearc/oil.nvim",
 		opts = {
 			default_file_explorer = true,
+			keymaps = {
+				["<C-h>"] = false,
+			},
 			view_options = {
 				-- Show files and directories that start with "."
 				show_hidden = true,

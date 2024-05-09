@@ -2,7 +2,15 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				ui = {
+					icons = {
+						package_installed = "✓",
+						package_pending = "➜",
+						package_uninstalled = "✗",
+					},
+				},
+			})
 		end,
 	},
 	{
@@ -15,7 +23,6 @@ return {
 					"dockerls",
 					"docker_compose_language_service",
 					"tsserver",
-					"eslint",
 					"cssls",
 					"clangd",
 					"gopls",
