@@ -25,11 +25,11 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion engine plugin for neovim written in Lua.
 - [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - A nvim-cmp source for command line completion
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - A lua powered greeter
-- [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer allowing editing files like buffers
+- [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint) - asynchronous linter plugin
+- [karb94/neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling plugin
 - [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Nice approach to marking files with nice UI
 
 ## Shell Setup:
 
 - NeoVim
 - Nerd fonts - Powerline-patched fonts. I use Mononoki Nerd Font.
-- iTerm
