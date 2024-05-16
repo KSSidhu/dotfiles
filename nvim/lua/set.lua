@@ -51,6 +51,11 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagn
 vim.keymap.set("n", "<leader>ss", ":split<Return>", {})
 vim.keymap.set("n", "<leader>vs", ":vsplit<Return>", {})
 
+vim.keymap.set("n", "<M-,>", "<c-w>5<")
+vim.keymap.set("n", "<M-.>", "<c-w>5>")
+vim.keymap.set("n", "<M-t>", "<C-W>+")
+vim.keymap.set("n", "<M-s>", "<C-W>-")
+
 -------------------------------------------------------------------------------
 -------------------------------- autocmds -------------------------------------
 -------------------------------------------------------------------------------
