@@ -25,6 +25,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
+vim.opt.clipboard = 'unnamedplus'
 vim.opt.scrolloff = 10
 
 -- Make pane switching more "vim-like"
