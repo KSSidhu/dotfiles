@@ -91,13 +91,71 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
 				-- Server-specific settings. See `:help lspconfig-setup`
 				settings = {
 					["rust-analyzer"] = {},
 				},
 			})
-			lspconfig.tailwindcss.setup({
+			-- lspconfig.tailwindcss.setup({
+			-- 	capabilities = capabilities,
+			-- })
+			lspconfig.volar.setup({
 				capabilities = capabilities,
+				filetypes = {
+					"vue",
+				},
+				init_options = {
+					typescript = {
+						tsdk = "/Users/kiratsidhu/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib",
+					},
+					preferences = {
+						disableSuggestions = true,
+					},
+					languageFeatures = {
+						implementation = true,
+						references = true,
+						definition = true,
+						typeDefinition = true,
+						callHierarchy = true,
+						hover = true,
+						rename = true,
+						renameFileRefactoring = true,
+						signatureHelp = true,
+						codeAction = true,
+						workspaceSymbol = true,
+						diagnostics = true,
+						semanticTokens = true,
+						completion = {
+							defaultTagNameCase = "both",
+							defaultAttrNameCase = "kebabCase",
+							getDocumentNameCasesRequest = false,
+							getDocumentSelectionRequest = false,
+						},
+					},
+				},
+			})
+			lspconfig.svelte.setup({
+				capabilities = capabilities,
+				filetypes = { "svelte" },
+				on_attach = function(client, bufnr)
+					if client.name == "svelte" then
+						vim.api.nvim_create_autocmd("BufWritePost", {
+							pattern = { "*.js", "*.ts", "*.svelte" },
+							callback = function(ctx)
+								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+							end,
+						})
+					end
+					if vim.bo[bufnr].filetype == "svelte" then
+						vim.api.nvim_create_autocmd("BufWritePost", {
+							pattern = { "*.js", "*.ts", "*.svelte" },
+							callback = function(ctx)
+								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
+							end,
+						})
+					end
+				end,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
