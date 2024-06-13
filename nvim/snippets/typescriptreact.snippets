@@ -7,3 +7,34 @@ snippet rfunc "react functional component"
 
 					return null
 				}
+
+snippet lazyq "useLazyLoadQuery"
+			const { $1 } = useLazyLoadQuery<${TM_FILENAME_BASE}Query>(
+        graphql\`,
+          query ${TM_FILENAME_BASE}Query(\$id: ID!) {
+            $1: node(id: \$id) {
+              ... on $2 {
+                $0
+              }
+            }
+          }
+        \`,
+        {
+          id: $3,
+        }
+      )
+
+snippet frag "useFragment"
+		const $2 = useFragment<${TM_FILENAME_BASE}Fragment\$key>(
+          graphql\`
+              fragment ${TM_FILENAME_BASE}Fragment on $1 {
+                  $0
+              }
+          \`,
+          $2Key
+      )
+
+snippet ustyles "Scaffold use styles hook"
+		const useStyles = makeUseStyles((theme) => ({
+
+			}))
