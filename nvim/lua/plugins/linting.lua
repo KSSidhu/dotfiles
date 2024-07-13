@@ -23,11 +23,10 @@ return {
 		end,
 	},
 	{
-		"sontungexpt/better-diagnostic-virtual-text",
+		"rachartier/tiny-inline-diagnostic.nvim",
+		event = "VeryLazy",
 		config = function()
-			require("better-diagnostic-virtual-text").setup({
-				inline = false,
-			})
+			require("tiny-inline-diagnostic").setup()
 
 			-- Disable default diagnostics to avoid conflicts
 			vim.diagnostic.config({ virtual_text = false })
