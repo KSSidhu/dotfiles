@@ -54,7 +54,7 @@ return {
 
 		require("lualine").setup({
 			options = {
-				theme = "eldritch",
+				theme = "duskfox",
 			},
 			sections = {
 				lualine_a = { modes },

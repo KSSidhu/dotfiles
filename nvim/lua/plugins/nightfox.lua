@@ -1,9 +1,9 @@
 return {
-	"eldritch-theme/eldritch.nvim",
+	"EdenEast/nightfox.nvim",
 	lazy = false,
 	priority = 1000,
 	opts = {},
 	config = function()
-		vim.cmd([[colorscheme eldritch]])
+		vim.cmd([[colorscheme duskfox]])
 	end,
 }
