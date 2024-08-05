@@ -1,0 +1,53 @@
+
+[pull]
+        rebase = true
+
+[user]
+	      name = MY_NAME
+        email = MY_EMAIL
+        username = MY_USERNAME
+
+[push]
+        # doesn’t allow you to push the branch if it doesn’t exist on the remote
+        default = simple
+
+[status]
+        # shows individual files in untracked directories
+        showUntrackedFiles = all
+
+[alias]
+        # show a beautiful print out of the commit log
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %C(bold)(%cr)%Creset' --abbrev-commit --date=relative
+        # revert the previous commit and leave the files as staged (--soft)
+        undo = reset --soft HEAD^
+        # stash all the dirty files, including untracked
+        stash-all = stash save --include-untracked
+        # squash all commits going back to the beginning of the branch
+        squash = "!f() { if [ \\"$1\\" = \\"\\" ]; then echo \\"You must enter a branch name\\"; exit; fi && git reset $(git merge-base $1 $(git rev-parse --abbrev-ref HEAD)); }; f"
+        # append to the previous commit
+        append = commit --amend
+        # list all the local branches + creation date and more info
+        ls = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:bold blue)%(align:45,left)%(refname:short)%(end)%(color:reset) - %(align:18,middle)%(authorname)%(end) - %(align:18,left)(%(color:yellow)%(committerdate:relative)%(color:reset))%(end) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject)'
+        # publish the branch to remote
+        publish = !git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
+        # print local branches matching search (search includes branch name, author name, date last commit, and message of last commit)
+        search = !sh -c \\"git ls | grep \\"$1\\"\\"
+        # short for status
+        st = status
+        # fetch all
+        fa = fetch --all
+        # checkout
+        co = checkout
+				# repush
+        repush = !sh -c \\"git add . && git append --no-edit && git push -f\\"
+        # clear stashes all unstaged changes
+        clear = stash save --keep-index
+        # new prints commits new since the last command
+        new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+
+# rerere = reuse recorded resolution of conflicted merges. It allows you to avoid having to fix the same conflict multiple times
+[rerere]
+        enabled = true
+        autoupdate = true
+[core]
+	editor = nvim
