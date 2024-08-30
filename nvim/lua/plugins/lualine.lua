@@ -59,7 +59,6 @@ return {
 			sections = {
 				lualine_a = { modes },
 				lualine_b = {
-					"branch",
 					"diagnostics",
 				},
 				lualine_x = {
