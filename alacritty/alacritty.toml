@@ -12,7 +12,8 @@ decorations = "Buttonless"
 option_as_alt = "Both"
 
 [font]
-normal.family = "Mononoki Nerd Font"
+normal.family = "CaskaydiaCove Nerd Font Propo"
+# normal.family = "Mononoki Nerd Font"
 
 size = 18
 
