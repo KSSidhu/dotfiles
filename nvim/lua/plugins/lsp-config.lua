@@ -96,6 +96,9 @@ return {
 					["rust-analyzer"] = {},
 				},
 			})
+			lspconfig.volar.setup({
+				capabilities = capabilities,
+			})
 			lspconfig.eslint.setup({
 				capabilities = capabilities,
 			})
