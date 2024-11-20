@@ -113,7 +113,7 @@ alt-9 = 'workspace 9'
 alt-b = 'workspace B' # for Browser
 alt-t = 'workspace T' # for Terminal
 alt-m = 'workspace M' # for Music
-alt-f = 'workspace Y' # for File Explorer
+alt-y = 'workspace Y' # for File Explorer
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
