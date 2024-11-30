@@ -57,43 +57,4 @@ return {
 			require("neoscroll").setup({})
 		end,
 	},
-	{
-		"sethen/line-number-change-mode.nvim",
-		config = function()
-			local palette = require("nightfox.palette").load("duskfox")
-			if palette == nil then
-				return nil
-			end
-
-			require("line-number-change-mode").setup({
-				mode = {
-					i = {
-						bg = palette.green.base,
-						fg = palette.fg1,
-						bold = true,
-					},
-					n = {
-						bg = palette.blue.base,
-						fg = palette.fg1,
-						bold = true,
-					},
-					R = {
-						bg = palette.orange.base,
-						fg = palette.fg1,
-						bold = true,
-					},
-					v = {
-						bg = palette.magenta.base,
-						fg = palette.sel0,
-						bold = true,
-					},
-					V = {
-						bg = palette.magenta.base,
-						fg = palette.sel0,
-						bold = true,
-					},
-				},
-			})
-		end,
-	},
 }
