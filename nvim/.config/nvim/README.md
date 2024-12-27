@@ -10,7 +10,8 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 ## Plugins:
 
 - [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A plugin manager for Neovim
-- [eldritch/nvim](https://github.com/eldritch-theme/eldritch.nvim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
+- [ilof2/posterpole.nvim](https://github.com/ilof2/posterpole.nvim) - A colorscheme I like with support for lsp, treesitter and a variety of plugins
+- [stevearc/oil.nvim](https://github.com/stevearc/oil.nvim) - Neovim file explorer: edit your filesystem like a buffer
 - [stevearc/conform.nvim](https://github.com/stevearc/conform.nvim) - Lightweight, powerful formatter
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure Neovim statusline written in Lua
 - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Treesitter configurations and abstraction layer for Neovim
@@ -23,11 +24,11 @@ I primarily work in typescript, react, golang. Been playing around with rust too
 - [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) - A Git wrapper for nvim
 - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snip engine
 - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp) - A completion engine plugin for neovim written in Lua.
-- [hrsh7th/cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) - A nvim-cmp source for command line completion
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - A lua powered greeter
 - [mfussenegger/nvim-lint](https://github.com/mfussenegger/nvim-lint) - asynchronous linter plugin
 - [karb94/neoscroll](https://github.com/karb94/neoscroll.nvim) - Smooth scrolling plugin
 - [ThePrimeagen/harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2) - Nice approach to marking files with nice UI
+- [rachartier/tiny-inline-diagnostic.nvim](https://github.com/rachartier/tiny-inline-diagnostic.nvim) - Display prettier diagnostic messages
 
 ## Shell Setup:
 

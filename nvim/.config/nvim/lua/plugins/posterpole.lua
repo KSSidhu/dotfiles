@@ -1,9 +1,9 @@
 return {
-	"EdenEast/nightfox.nvim",
+	"ilof2/posterpole.nvim",
 	lazy = false,
 	priority = 1000,
 	opts = {},
 	config = function()
-		vim.cmd([[colorscheme duskfox]])
+		vim.cmd([[colorscheme posterpole]])
 	end,
 }
