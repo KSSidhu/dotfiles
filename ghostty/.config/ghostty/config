@@ -1,0 +1,7 @@
+background = 25222A
+foreground = C6C0B9
+
+font-family = CaskaydiaCove Nerd Font Propo
+font-size = 18
+
+gtk-titlebar = true
