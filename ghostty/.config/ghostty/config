@@ -1,7 +1,11 @@
 background = 25222A
 foreground = C6C0B9
 
+selection-background = 4D4D4D
+selection-foreground = AFA79D
+
 font-family = CaskaydiaCove Nerd Font Propo
 font-size = 18
 
 gtk-titlebar = true
+quit-after-last-window-closed = true
