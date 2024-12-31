@@ -32,6 +32,6 @@ Session.vim
 .config/fish/config-local.fish
 fish/fish_variables
 #tmux
-/tmux/plugins/*
+/tmux/.config/tmux/plugins/*
 # nvim lock
 /**/lazy-lock.json

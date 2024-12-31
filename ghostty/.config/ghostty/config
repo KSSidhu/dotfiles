@@ -9,3 +9,5 @@ font-size = 18
 
 gtk-titlebar = true
 quit-after-last-window-closed = true
+
+keybind = command+k=text:\x0c
