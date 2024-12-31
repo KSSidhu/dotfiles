@@ -3,9 +3,7 @@
 Been learning vim and this is an updated setup I enjoy using.
 I primarily work in typescript, react, golang. Been playing around with rust too.
 
-![nvim screenshot](../images/editor-start-menu.png)
-
-![editor screenshot](../images/editor-tabs.png)
+![nvim screenshot](../../../images/editor-start-menu.png)
 
 ## Plugins:
 

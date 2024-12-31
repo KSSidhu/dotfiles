@@ -7,7 +7,7 @@ selection-foreground = AFA79D
 font-family = CaskaydiaCove Nerd Font Propo
 font-size = 18
 
-gtk-titlebar = true
+macos-titlebar-style = hidden
 quit-after-last-window-closed = true
 
 keybind = command+k=text:\x0c
