@@ -6,7 +6,7 @@ return {
 			-- Customize or remove this keymap to your liking
 			"<leader>gf",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true, timeout_ms = 500, })
+				require("conform").format({ async = true, lsp_fallback = true, timeout_ms = 500 })
 			end,
 			mode = "n",
 			desc = "Format buffer",
@@ -22,6 +22,7 @@ return {
 			css = { "prettierd" },
 			json = { "prettier" },
 			golang = { "gofumpt", "goimports" },
+			php = { "php-cs-fixer" },
 		},
 	},
 }

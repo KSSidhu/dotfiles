@@ -57,6 +57,14 @@ vim.keymap.set("n", "<M-.>", "<c-w>5>")
 vim.keymap.set("n", "<M-t>", "<C-W>+")
 vim.keymap.set("n", "<M-s>", "<C-W>-")
 
+-- Fold Configuration
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldcolumn = "0"
+vim.opt.foldtext = ""
+vim.opt.foldlevel = 99
+vim.opt.foldnestmax = 4
+
 -------------------------------------------------------------------------------
 -------------------------------- autocmds -------------------------------------
 -------------------------------------------------------------------------------

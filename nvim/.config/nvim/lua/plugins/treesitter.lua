@@ -17,6 +17,7 @@ return {
 				"css",
 				"json",
 				"html",
+				"php",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
