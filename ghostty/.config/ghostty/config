@@ -1,8 +1,4 @@
-background = 25222A
-foreground = C6C0B9
-
-selection-background = 4D4D4D
-selection-foreground = AFA79D
+theme = catppuccin-frappe
 
 font-family = CaskaydiaCove Nerd Font Propo
 font-size = 18
@@ -11,3 +7,6 @@ macos-titlebar-style = hidden
 quit-after-last-window-closed = true
 
 keybind = command+k=text:\x0c
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+macos-option-as-alt = true
