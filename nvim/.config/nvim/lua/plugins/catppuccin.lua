@@ -1,9 +1,9 @@
 return {
-	"ilof2/posterpole.nvim",
+	"catppuccin/nvim",
 	lazy = false,
 	priority = 1000,
 	opts = {},
 	config = function()
-		vim.cmd([[colorscheme posterpole]])
+		vim.cmd([[colorscheme catppuccin-frappe]])
 	end,
 }

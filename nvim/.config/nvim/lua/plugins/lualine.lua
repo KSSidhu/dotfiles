@@ -54,7 +54,7 @@ return {
 
 		require("lualine").setup({
 			options = {
-				theme = "posterpole",
+				theme = "catppuccin-frappe",
 			},
 			sections = {
 				lualine_a = { modes },
