@@ -26,6 +26,8 @@ return {
 					"cssls",
 					"clangd",
 					"gopls",
+					"volar",
+					"phpactor",
 				},
 			})
 		end,
@@ -92,6 +94,10 @@ return {
 			})
 			lspconfig.phpactor.setup({
 				capabilities = capabilities,
+				init_options = {
+					["language_server_phpstan.enabled"] = false,
+					["language_server_psalm.enabled"] = false,
+				},
 			})
 			lspconfig.rust_analyzer.setup({
 				-- Server-specific settings. See `:help lspconfig-setup`
