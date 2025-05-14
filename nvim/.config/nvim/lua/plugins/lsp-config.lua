@@ -1,6 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
+		version = "~1.0.0",
 		config = function()
 			require("mason").setup({
 				ui = {
@@ -15,6 +16,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		version = "~1.0.0",
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
@@ -71,7 +73,7 @@ return {
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 				commands = {
 					OrganizeImports = {
@@ -94,10 +96,6 @@ return {
 			})
 			lspconfig.phpactor.setup({
 				capabilities = capabilities,
-				init_options = {
-					["language_server_phpstan.enabled"] = false,
-					["language_server_psalm.enabled"] = false,
-				},
 			})
 			lspconfig.rust_analyzer.setup({
 				-- Server-specific settings. See `:help lspconfig-setup`
@@ -134,6 +132,12 @@ return {
 		priority = 1000, -- needs to be loaded in first
 		config = function()
 			require("tiny-inline-diagnostic").setup()
+		end,
+	},
+	{
+		"dmmulroy/ts-error-translator.nvim",
+		config = function()
+			require("ts-error-translator").setup()
 		end,
 	},
 }

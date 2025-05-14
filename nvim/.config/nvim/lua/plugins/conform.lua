@@ -23,6 +23,7 @@ return {
 			json = { "prettier" },
 			golang = { "gofumpt", "goimports" },
 			php = { "php-cs-fixer" },
+      blade = { "blade-formatter" }
 		},
 	},
 }
