@@ -19,11 +19,23 @@ return {
 			typescript = { "prettierd" },
 			javascriptreact = { "prettierd" },
 			typescriptreact = { "prettierd" },
+			vue = { "prettierd" },
 			css = { "prettierd" },
 			json = { "prettier" },
 			golang = { "gofumpt", "goimports" },
 			php = { "php-cs-fixer" },
-      blade = { "blade-formatter" }
+			blade = { "blade-formatter" },
+		},
+		formatters = {
+			["php-cs-fixer"] = {
+				command = "php-cs-fixer",
+				args = {
+					"fix",
+					"--rules=@PSR12", -- Formatting preset. Other presets are available, see the php-cs-fixer docs.
+					"$FILENAME",
+				},
+				stdin = false,
+			},
 		},
 	},
 }

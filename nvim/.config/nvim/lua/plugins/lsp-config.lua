@@ -74,6 +74,16 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.ts_ls.setup({
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = vim.fn.stdpath("data")
+								.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+							languages = { "vue" },
+						},
+					},
+				},
 				capabilities = capabilities,
 				commands = {
 					OrganizeImports = {
@@ -81,6 +91,7 @@ return {
 						description = "Organize Imports",
 					},
 				},
+				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			})
 			lspconfig.dockerls.setup({
 				capabilities = capabilities,
