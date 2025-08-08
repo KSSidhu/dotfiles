@@ -135,6 +135,11 @@ return {
 			vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
 			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
+
+			vim.lsp.handlers["textDocument/publishDiagnostics"] = function(err, result, ctx)
+				require("ts-error-translator").translate_diagnostics(err, result, ctx)
+				vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
+			end
 		end,
 	},
 	{
