@@ -19,37 +19,27 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
 	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		"folke/flash.nvim",
+		event = "VeryLazy",
+		---@type Flash.Config
 		opts = {
-			-- set marks specific to each git branch inside git repository
-			mark_branch = true,
+			modes = {
+				search = {
+					enabled = true,
+				},
+				char = {
+					jump_labels = true,
+				},
+			},
 		},
-		config = function()
-			local harpoon = require("harpoon")
-			harpoon:setup()
-
-			vim.keymap.set("n", "<leader>ha", function()
-				harpoon:list():add()
-			end, { desc = "add current buffer" })
-
-			vim.keymap.set("n", "<leader>hx", function()
-				harpoon:list():remove()
-			end, { desc = "remove current buffer" })
-
-			-- Toggle previous & next buffers stored within Harpoon list
-			vim.keymap.set("n", "<leader>hp", function()
-				harpoon:list():prev()
-			end, { desc = "toggle previous buffer in harpoon list" })
-			vim.keymap.set("n", "<leader>hn", function()
-				harpoon:list():next()
-			end, { desc = "toggle next buffer in harpoon list" })
-
-			vim.keymap.set("n", "<leader>hm", function()
-				harpoon.ui:toggle_quick_menu(harpoon:list())
-			end, { desc = "open harpoon list" })
-		end,
+  -- stylua: ignore
+  keys = {
+    { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+    { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+    { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+    { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+    -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+  },
 	},
 	{
 		"karb94/neoscroll.nvim",
