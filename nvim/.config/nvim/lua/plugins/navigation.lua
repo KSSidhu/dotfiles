@@ -59,4 +59,10 @@ return {
 			{ "<leader>?", "<cmd>VimCoach<cr>", desc = "Vim Coach" },
 		},
 	},
+	{
+		"saghen/blink.indent",
+		--- @module 'blink.indent'
+		--- @type blink.indent.Config
+		-- opts = {},
+	},
 }
