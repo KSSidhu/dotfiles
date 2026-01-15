@@ -105,9 +105,9 @@ return {
 					},
 				},
 			})
-			lspconfig.eslint.setup({
-				capabilities = capabilities,
-			})
+			--	lspconfig.eslint.setup({
+			--		capabilities = capabilities,
+			--	})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -123,7 +123,7 @@ return {
 	},
 	{
 		"rachartier/tiny-inline-diagnostic.nvim",
-		event = "VeryLazy", -- Or `LspAttach`
+		event = "VeryLazy",
 		priority = 1000, -- needs to be loaded in first
 		config = function()
 			require("tiny-inline-diagnostic").setup()
