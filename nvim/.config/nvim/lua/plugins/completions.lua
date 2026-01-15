@@ -1,60 +1,42 @@
 return {
 	{
-		"hrsh7th/cmp-nvim-lsp",
-	},
-	{
-		"L3MON4D3/LuaSnip",
-		dependencies = {
-			"saadparwaiz1/cmp_luasnip",
-		},
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"onsails/lspkind.nvim",
-		},
-		config = function()
-			local cmp = require("cmp")
-			local lspkind = require("lspkind")
-			require("luasnip.loaders.from_snipmate").lazy_load()
+		"saghen/blink.cmp",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		version = "1.*",
+		opts = {
+			keymap = { preset = "default" },
 
-			cmp.setup({
-				snippet = {
-					-- REQUIRED - you must specify a snippet engine
-					expand = function(args)
-						require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-					end,
-				},
-				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
-				},
-				formatting = {
-					format = lspkind.cmp_format({
-						mode = "symbol_text", -- show only symbol annotations
-						maxwidth = 50, -- prevent the popup from showing more than provided characters
-						ellipsis_char = "...", -- when popup menu exceed maxwidth, show truncated as ellipsis
-						show_labelDetails = true, -- show labelDetails in menu.
+			appearance = {
+				nerd_font_variant = "mono",
+			},
 
-						before = function(_, vim_item)
-							return vim_item
-						end,
-					}),
+			completion = {
+				documentation = {
+					auto_show = true,
+					auto_show_delay_ms = 500,
+					window = { border = "single" },
 				},
-				mapping = cmp.mapping.preset.insert({
-					["<C-b>"] = cmp.mapping.scroll_docs(-4),
-					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping.complete(),
-					["<C-e>"] = cmp.mapping.abort(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
-				}),
-				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" }, -- For luasnip users.
-				}, {
-					{ name = "buffer" },
-				}),
-			})
-		end,
+
+				accept = { auto_brackets = { enabled = false } },
+			},
+			signature = { window = { border = "single" } },
+
+			sources = {
+				default = { "snippets", "lsp", "path", "buffer" },
+				providers = {
+					snippets = {
+						opts = { friendly_snippets = false },
+					},
+				},
+			},
+
+			-- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
+			-- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
+			-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
+			--
+			-- See the fuzzy documentation for more information
+			fuzzy = { implementation = "prefer_rust" },
+		},
+		opts_extend = { "sources.default" },
 	},
 }

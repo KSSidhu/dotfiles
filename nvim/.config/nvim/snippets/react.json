@@ -1,0 +1,52 @@
+{
+  "Functional Component": {
+    "prefix": "rfunc",
+    "body": [
+				"interface Props {\n",
+				"}\n\n",
+				"export default function ${TM_FILENAME_BASE}({}: Props) {\n",
+					"\treturn null\n",
+				"}"
+    ]
+  },
+  "Lazy Load Query": {
+    "prefix": "lazyq",
+    "body": [
+			"const { $1 } = useLazyLoadQuery<${TM_FILENAME_BASE}Query>(",
+      "  graphql`",
+      "    query ${TM_FILENAME_BASE}Query(\\$id: ID!) {",
+      "      $1: node(id: \\$id) {",
+      "        ... on $2 {",
+      "          $0",
+      "        }",
+      "      }",
+      "    }",
+      "  `,",
+      "  {",
+      "    id: $3,",
+      "  }",
+      ")"    
+    ]
+  },
+  "Fragment": {
+    "prefix": "frag",
+    "body": [
+      "const $2 = useFragment<${TM_FILENAME_BASE}_$1Fragment\\$key>(",
+      "    graphql`",
+      "        fragment ${TM_FILENAME_BASE}_$1Fragment on $1 {",
+      "            $0",
+      "        }",
+      "    `,",
+      "    $2Key",
+      ")"
+    ]
+  },
+  "Scaffole use styles hook": {
+    "prefix": "ustyles",
+    "body": [
+      "const useStyles = makeUseStyles((theme) => ({", 
+      "    $0", 
+      "}))"
+    ]
+  }
+}
