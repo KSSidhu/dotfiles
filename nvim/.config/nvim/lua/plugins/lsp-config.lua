@@ -39,7 +39,6 @@ return {
 		dependencies = { "saghen/blink.cmp" },
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			local lspconfig = require("lspconfig")
 
 			local function organize_imports()
 				local params = {
@@ -47,13 +46,26 @@ return {
 					arguments = { vim.api.nvim_buf_get_name(0) },
 					title = "",
 				}
-				vim.lsp.buf.execute_command(params)
+				-- Find the Typescript client attached to buffer
+				local clients = vim.lsp.get_clients({ bufnr = 0, name = "ts_ls" })
+				local client = clients[1]
+				client:exec_cmd(params)
 			end
 
-			lspconfig.lua_ls.setup({
+			vim.lsp.config["lua_ls"] = {
 				capabilities = capabilities,
-			})
-			lspconfig.ts_ls.setup({
+				cmd = { "lua-language-server" },
+				filetypes = { "lua" },
+				root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+					},
+				},
+			}
+			vim.lsp.config("ts_ls", {
 				init_options = {
 					plugins = {
 						{
@@ -65,36 +77,51 @@ return {
 					},
 				},
 				capabilities = capabilities,
-				commands = {
-					OrganizeImports = {
-						organize_imports,
-						description = "Organize Imports",
-					},
-				},
+				-- commands = {
+				-- 	OrganizeImports = {
+				-- 		organize_imports,
+				-- 		description = "Organize Imports",
+				-- 	},
+				-- },
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			})
-			lspconfig.dockerls.setup({
+			--	vim.api.nvim_create_autocmd("BufWritePre", {
+			--		callback = organize_imports,
+			--	})
+			vim.api.nvim_create_user_command(
+				"OrganizeImports",
+				organize_imports,
+				{ desc = "Organize TypeScript imports" }
+			)
+
+			vim.lsp.config("dockerls", {
 				capabilities = capabilities,
 			})
-			lspconfig.cssls.setup({
+
+			vim.lsp.config("cssls", {
 				capabilities = capabilities,
 			})
-			lspconfig.clangd.setup({
+
+			vim.lsp.config("clangd", {
 				capabilities = capabilities,
 			})
-			lspconfig.gopls.setup({
+
+			vim.lsp.config("gopls", {
 				capabilities = capabilities,
 			})
-			lspconfig.phpactor.setup({
+
+			vim.lsp.config("phpactor", {
 				capabilities = capabilities,
 			})
-			lspconfig.rust_analyzer.setup({
+
+			vim.lsp.config("rust_analyzer", {
 				-- Server-specific settings. See `:help lspconfig-setup`
 				settings = {
 					["rust-analyzer"] = {},
 				},
 			})
-			lspconfig.volar.setup({
+
+			vim.lsp.config("vue_ls", {
 				capabilities = capabilities,
 				init_options = {
 					vue = {
@@ -104,6 +131,17 @@ return {
 						tsdk = vim.fn.getcwd() .. "/node_modules/typescript/lib",
 					},
 				},
+			})
+			vim.lsp.enable({
+				"vue_ls",
+				"rust_analyzer",
+				"ts_ls",
+				"lua_ls",
+				"clangd",
+				"phpactor",
+				"cssls",
+				"dockerls",
+				"gopls",
 			})
 			--	lspconfig.eslint.setup({
 			--		capabilities = capabilities,
