@@ -112,6 +112,10 @@ return {
 
 			vim.lsp.config("phpactor", {
 				capabilities = capabilities,
+				cmd = { "phpactor", "language-server" },
+				filetypes = { "php" },
+				root_markers = { ".git", "composer.json", ".phpactor.json", ".phpactor.yml" },
+				workspace_required = true,
 			})
 
 			vim.lsp.config("rust_analyzer", {
