@@ -2,7 +2,8 @@
   "name": "personal-snippets",
   "contributes": {
     "snippets": [
-      { "language": ["typescriptreact", "javascriptreact"], "path": "./react.json" }
+      { "language": ["typescriptreact", "javascriptreact"], "path": "./react.json" },
+      { "language": ["php", "blade"], "path": "./php.json"}
     ]
   }
 }
