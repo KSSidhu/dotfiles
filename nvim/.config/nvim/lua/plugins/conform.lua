@@ -25,6 +25,7 @@ return {
 			golang = { "gofumpt", "goimports" },
 			php = { "php-cs-fixer" },
 			blade = { "blade-formatter" },
+			python = { "ruff_format" },
 		},
 		formatters = {
 			["php-cs-fixer"] = {

@@ -136,8 +136,14 @@ return {
 					},
 				},
 			})
+
+			vim.lsp.config("basedpyright", {
+				capabilities = capabilities,
+			})
+
 			vim.lsp.enable({
 				"vue_ls",
+				"basedpyright",
 				"rust_analyzer",
 				"ts_ls",
 				"lua_ls",
