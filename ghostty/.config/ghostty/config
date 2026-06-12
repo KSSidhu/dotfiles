@@ -1,6 +1,6 @@
 theme = Catppuccin Frappe
 
-font-family = CaskaydiaCove Nerd Font Propo
+font-family = Iosevka Custom
 font-size = 18
 
 macos-titlebar-style = hidden
