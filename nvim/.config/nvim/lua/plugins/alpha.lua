@@ -9,12 +9,14 @@ return {
 		local dashboard = require("alpha.themes.startify")
 
 		dashboard.section.header.val = {
-			[[                        ]],
-			[[         ／l、          ]],
-			[[        （ﾟ､ ｡ ７       ]],
-			[[         l  ~ヽ         ]],
-			[[         じしf_,)ノ     ]],
-			[[                        ]],
+			" _______________________________________________________________________ ",
+			'|[] CarrotsShell                                                  |F]|!"|',
+			'|"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""|"|',
+			"|nvim/.config/nvim> nvim progress.lua                                 | |",
+			"|                                                                     | |",
+			"|                                                                     | |",
+			"|                                                                     |_|",
+			"|_____________________________________________________________________|/|",
 		}
 
 		dashboard.section.header.opts.position = "center"
